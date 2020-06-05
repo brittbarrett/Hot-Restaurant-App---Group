@@ -17,10 +17,10 @@ app.use(express.json());
 
 var tables = [
   {
-    customerName: "",
-    phoneNumber: "",
-    customerEmail: "",
-    customerID: "",
+    customerName: "Brittanie",
+    phoneNumber: "(310) 940-2409",
+    customerEmail: "britt.barrett302@gmail.com",
+    customerID: "brittbarrett302",
   },
 ];
 
@@ -29,17 +29,17 @@ var waitlist = [{}];
 // html routes
 app.get("/", function (req, res) {
   // res.send("homepage")
-  res.sendFile(path.join(__dirname, "homepage.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/reserveForm", function (req, res) {
+app.get("/reserve.html", function (req, res) {
   // res.send("reservation form")
-  res.sendFile(path.join(__dirname, "reserveForm.html"));
+  res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-app.get("/reserveViews", function (req, res) {
+app.get("/tables.html", function (req, res) {
   // res.send("reservation views")
-  res.sendFile(path.join(__dirname, "reserveViews.html"));
+  res.sendFile(path.join(__dirname, "tables.html"));
 });
 
 // data table routes
